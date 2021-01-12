@@ -116,7 +116,7 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            return sentences.First(sentence => sentence.Contains("needle"));
+            return sentences.FirstOrDefault(sentence => sentence.Contains("needle"));
         }
 
 
