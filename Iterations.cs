@@ -95,9 +95,7 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
         {
-            var allMoviesThatYear = movies.Where(movie => movie.Year == yearToMatch);
-            var theBestMovies = allMoviesThatYear.Where(movie => movie.Score > 90);
-            return theBestMovies.Select(movie => movie.Name);
+            return movies.Where(movie => (movie.Year == yearToMatch) && (movie.Score > 90)).Select(movie => movie.Name);
         }
 
 
@@ -118,8 +116,7 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            var foundNeedle = sentences.Where(sentence => sentence.Contains("needle"));
-            return String.Join("", foundNeedle);
+            return sentences.First(sentence => sentence.Contains("needle"));
         }
 
 
