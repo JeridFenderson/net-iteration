@@ -30,10 +30,8 @@ namespace DotnetIteration
         //    words as an argument and returns a new list with all
         //    the words forced to uppercase.
         //
-        public static IEnumerable<string> Yelling(List<string> words)
-        {
-            return words.Select(word => word.ToUpper());
-        }
+        public static IEnumerable<string> Yelling(List<string> words) =>
+            words.Select(word => word.ToUpper());
 
 
         // 
@@ -41,10 +39,8 @@ namespace DotnetIteration
         //    numbers as an argument and returns a new list with all
         //    the numbers multiplied by 2.
         // 
-        public static IEnumerable<int> Double(List<int> numbers)
-        {
-            return numbers.Select(number => number * 2);
-        }
+        public static IEnumerable<int> Double(List<int> numbers) =>
+            numbers.Select(number => number * 2);
 
 
         // 
@@ -53,20 +49,17 @@ namespace DotnetIteration
         //    string suffixed with " is at index X" where X is the index
         //    of the element.
         // 
-        public static IEnumerable<string> StringyIndexes(List<string> words)
-        {
-            return words.Select((word, index) => $"{word} is at index {index}");
-        }
+        public static IEnumerable<string> StringyIndexes(List<string> words) =>
+            words.Select((word, index) => $"{word} is at index {index}");
 
 
         // 
         // 4) Complete the method OnlyTheEvenSurvive that accepts a list of
         //    numbers and returns only the elements that are even.
         // 
-        public static IEnumerable<int> OnlyTheEvenSurvive(List<int> numbers)
-        {
-            return numbers.Where(number => number % 2 == 0);
-        }
+        public static IEnumerable<int> OnlyTheEvenSurvive(List<int> numbers) =>
+            numbers.Where(number => number % 2 == 0);
+
 
 
         // 
@@ -74,10 +67,9 @@ namespace DotnetIteration
         //    list of numbers and returns only the elements at indexes that
         //    are even.
         // 
-        public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> numbers)
-        {
-            return numbers.Where((numbers, index) => index % 2 == 0);
-        }
+        public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> numbers) =>
+            numbers.Where((numbers, index) => index % 2 == 0);
+
 
 
         // 
@@ -93,20 +85,17 @@ namespace DotnetIteration
         //   Score: 99
         // }
         // 
-        public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
-        {
-            return movies.Where(movie => (movie.Year == yearToMatch) && (movie.Score > 90)).Select(movie => movie.Name);
-        }
+        public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch) =>
+            movies.Where(movie => (movie.Year == yearToMatch) && (movie.Score > 90)).Select(movie => movie.Name);
+
 
 
         // 
         // 7) Complete the method EveryoneIsOdd that accepts a list of
         //    numbers and returns true if every element of the list is odd.
         // 
-        public static bool EveryoneIsOdd(List<int> numbers)
-        {
-            return numbers.All(number => number % 2 != 0);
-        }
+        public static bool EveryoneIsOdd(List<int> numbers) =>
+            numbers.All(number => number % 2 != 0);
 
 
         // 
@@ -114,10 +103,9 @@ namespace DotnetIteration
         //    strings and returns the one string that contains the word
         //    `needle`.
         // 
-        public static string FindTheNeedle(List<string> sentences)
-        {
-            return sentences.FirstOrDefault(sentence => sentence.Contains("needle"));
-        }
+        public static string FindTheNeedle(List<string> sentences) =>
+            sentences.FirstOrDefault(sentence => sentence.Contains("needle"));
+
 
 
         // 
@@ -125,10 +113,8 @@ namespace DotnetIteration
         //    strings and returns the index of the string that contains
         //    the word `needle` inside.
         // 
-        public static int FindTheNeedleIndex(List<string> sentences)
-        {
-            return sentences.FindIndex((sentence) => sentence.Contains("needle"));
-        }
+        public static int FindTheNeedleIndex(List<string> sentences) =>
+            sentences.FindIndex((sentence) => sentence.Contains("needle"));
 
 
         // 
@@ -136,9 +122,7 @@ namespace DotnetIteration
         //     strings and returns true if at least one string is exactly
         //     four characters long.
         // 
-        public static bool SomeoneToLove(List<string> words)
-        {
-            return words.Any(word => word.Length == 4);
-        }
+        public static bool SomeoneToLove(List<string> words) =>
+            words.Any(word => word.Length == 4);
     }
 }
